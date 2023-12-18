@@ -1,0 +1,156 @@
+write calculator on rust:
+
+use std::io;
+
+fn main() {
+    let mut input = String::new();
+    println!("Enter an expression:");
+    io::stdin().read_line(&mut input).unwrap();
+
+    let result = calc(&input);
+    println!("Result is: {}", result);
+}
+
+fn calc(input: &str) -> i32 {
+    let tokens: Vec<&str> = input.split(' ').collect();
+
+    let mut result: i32 = tokens[0].parse().unwrap();
+    let mut op: &str = &tokens[1];
+
+    for i in 2..tokens.len() {
+        let num: i32 = tokens[i].parse().unwrap();
+        match op {
+            "+" => result = result + num,
+            "-" => result = result - num,
+            "*" => result = result * num,
+            "/" => result = result / num,
+            _ => println!("Operator not supported"),
+        }
+    }
+
+    result
+}
+
+/////write calculator on python:
+
+def add(x, y):
+   return x + y
+
+def subtract(x, y):
+   return x - y
+
+def multiply(x, y):
+   return x * y
+
+def divide(x, y):
+   return x / y
+
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+
+choice = input("Enter choice(1/2/3/4):")
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if choice == '1':
+   print(num1,"+",num2,"=", add(num1,num2))
+
+elif choice == '2':
+   print(num1,"-",num2,"=", subtract(num1,num2))
+
+elif choice == '3':
+   print(num1,"*",num2,"=", multiply(num1,num2))
+
+elif choice == '4':
+   print(num1,"/",num2,"=", divide(num1,num2))
+else:
+   print("Invalid input")
+   
+   ///write this code on rust:
+
+ fn add(x: i32, y: i32) -> i32 {
+     x + y
+ }
+ 
+ fn subtract(x: i32, y: i32) -> i32 {
+     x - y
+ }
+ 
+ fn multiply(x: i32, y: i32) -> i32 {
+     x * y
+ }
+ 
+ fn divide(x: i32, y: i32) -> i32 {
+     x / y
+ }
+ 
+ fn main() {
+     println!("Select operation.");
+     println!("1.Add");
+     println!("2.Subtract");
+     println!("3.Multiply");
+     println!("4.Divide");
+ 
+     let choice = input!("Enter choice(1/2/3/4):");
+     let num1: i32 = input!("Enter first number:");
+     let num2: i32 = input!("Enter second number:");
+ 
+     match choice.trim() {
+         "1" => println!("{} + {} = {}", num1, num2, add(num1, num2)),
+         "2" => println!("{} - {} = {}", num1, num2, subtract(num1, num2)),
+         "3" => println!("{} * {} = {}", num1, num2, multiply(num1, num2)),
+         "4" => println!("{} / {} = {}", num1, num2, divide(num1, num2)),
+         _ => println!("Invalid input"),
+     }
+ }
+
+
+ write calculator on ruby:
+
+def add(x, y)
+  x + y
+end
+
+def subtract(x, y)
+  x - y
+end
+
+def multiply(x, y)
+  x * y
+end
+
+def divide(x, y)
+  x / y
+end
+
+puts "Select operation."
+puts "1. Add"
+puts "2. Subtract"
+puts "3. Multiply"
+puts "4. Divide"
+
+choice = gets.chomp
+
+print "Enter first number: "
+num1 = gets.chomp.to_i
+
+print "Enter second number: "
+num2 = gets.chomp.to_i
+
+case choice
+when '1'
+  puts "#{num1} + #{num2} = #{add(num1, num2)}"
+when '2'
+  puts "#{num1} - #{num2} = #{subtract(num1, num2)}"
+when '3'
+  puts "#{num1} * #{num2} = #{multiply(num1, num2)}"
+when '4'
+  puts "#{num1} / #{num2} = #{divide(num1, num2)}"
+else
+  puts "Invalid input"
+end
+

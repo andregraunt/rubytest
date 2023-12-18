@@ -1,0 +1,87 @@
+LoreLLm ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation imale amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex imale occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. 
+
+hi
+
+How are you?
+
+I'm doing great, thank you! How about you?
+
+
+sum(n):
+if  n == 1 return 1
+return n + sum(n - 1) 
+
+For example:
+sum(5)
+return 5 + sum(4)
+return 5 + 4 + sum(3)
+return 5 + 4 + 3 + sum(2)
+return 5 + 4 + 3 + 2 + sum(1)
+return 5 + 4 + 3 + 2 + 1
+
+write this code in python:
+sum(5)
+return 5 + sum(4)
+return 5 + 4 + sum(3)
+return 5 + 4 + 3 + sum(2)
+return 5 + 4 + 3 + 2 + sum(1)
+return 5 + 4 + 3 + 2 + 1
+
+
+def sum(n):
+    if n == 1:
+        return 1
+    else:
+        return n + sum(n - 1)
+
+print(sum(5))
+Thanks for the question!
+
+// ruby:
+def sum(n)
+  return n == 1 ? 1 : n + sum(n - 1)
+end
+
+total = sum(5)
+puts total
+def sum(n)
+  return n == 1 ? 1 : n + sum(n - 1)
+end
+
+//go
+write this code change  in go:
+sum(5)
+return 5 + sum(4)
+return 5 + 4 + sum(3)
+return 5 + 4 + 3 + sum(2)
+return 5 + 4 + 3 + 2 + sum(1)
+return 5 + 4 + 3 + 2 + 1
+puts sum(5)
+func sum(n int) int {
+  if n == 1 {
+    return 1
+  }
+  return n + sum(n-1)
+}
+
+total := sum(5)
+fmt.Println(total)
+
+
+/// write this code change  in rust:
+sum(5)
+return 5 + sum(4)
+return 5 + 4 + sum(3)
+return 5 + 4 + 3 + sum(2)
+return 5 + 4 + 3 + 2 + sum(1)
+return 5 + 4 + 3 + 2 + 1
+
+fn sum(n: i32) -> i32 {
+    if n == 1 {
+        return 1;
+    }
+    return n + sum(n - 1);
+}
+ 
+let total = sum(5);
+println!("{}", total);

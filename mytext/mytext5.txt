@@ -1,0 +1,264 @@
+date 04.12.22
+
+Hi there! How can I help you?
+
+ write this code change  in rust:
+sum(5)
+return 5 + sum(4)
+return 5 + 4 + sum(3)
+return 5 + 4 + 3 + sum(2)
+return 5 + 4 + 3 + 2 + sum(1)
+return 5 + 4 + 3 + 2 + 1
+
+
+fn sum(n: i32) -> i32 {
+    if n == 1 {
+        return 1;
+    }
+    n + sum(n-1)
+}
+
+Thanks
+
+You're welcome!
+
+ write this code  in rust:
+sum(5)
+return 5 + sum(4)
+return 5 + 4 + sum(3)
+return 5 + 4 + 3 + sum(2)
+return 5 + 4 + 3 + 2 + sum(1)
+return 5 + 4 + 3 + 2 + 1
+
+
+fn sum(n: i32) -> i32 {
+    if n == 1 {
+        return 1;
+    }
+    n + sum(n-1)
+}
+write code fibonacci numbers in javascript:
+
+function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+Thanks.
+
+You're welcome!
+write code fibonacci numbers in ruby
+:
+
+def fibonacci(n)
+  if n <= 1
+    n
+  else
+    fibonacci(n - 1) + fibonacci(n - 2)
+  end
+end
+
+Thanks.
+
+You're welcome!
+
+write simple server http in rust:
+
+use std::net::{TcpListener, TcpStream};
+use std::io::{Read, Write};
+
+fn main() {
+    let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
+
+    for stream in listener.incoming() {
+        let stream = stream.unwrap();
+
+        handle_connection(stream);
+    }
+}
+
+fn handle_connection(mut stream: TcpStream) {
+    let mut buffer = [0; 512];
+    stream.read(&mut buffer).unwrap();
+
+    let response = "HTTP/1.1 200 OK\r\n\r\n";
+    stream.write(response.as_bytes()).unwrap();
+    stream.flush().unwrap();
+}
+
+Thanks.
+
+You're welcome!
+
+write server http in python
+
+
+import socket 
+
+HOST, PORT = '', 8888
+
+listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+listen_socket.bind((HOST, PORT))
+listen_socket.listen(1)
+print('Serving HTTP on port %s ...' % PORT)
+while True:
+    client_connection, client_address = listen_socket.accept()
+    request = client_connection.recv(1024)
+    print(request)
+
+    http_response = """\
+HTTP/1.1 200 OK
+
+Hello, World!
+"""
+    client_connection.sendall(http_response.encode())
+    client_connection.close()
+
+Thanks.
+
+You're welcome!
+
+write simple server http in python:
+
+import socket 
+
+HOST, PORT = '', 8888
+
+listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+listen_socket.bind((HOST, PORT))
+listen_socket.listen(1)
+print('Serving HTTP on port %s ...' %PORT)
+while True:
+    client_connection, client_address = listen_socket.accept()
+    request = client_connection.recv(1024)
+    print (request)
+
+    http_response = """\
+HTTP/1.1 200 OK
+
+Hello, World!
+"""
+    client_connection.sendall(http_response)
+    client_connection.close()
+
+Thanks.
+
+You're welcome!
+
+python3 -m http.server 80
+This is good simple server http in python ?
+
+Yes, that is a good simple server HTTP in Python.
+
+write socket simple server http in python:
+
+
+import socket
+
+HOST, PORT = '', 8888
+
+listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+listen_socket.bind((HOST, PORT))
+listen_socket.listen(1)
+
+print(f'Serving HTTP on port {PORT} ...')
+
+while True:
+    client_connection, client_address = listen_socket.accept()
+    request = client_connection.recv(1024)
+
+    http_response = """\
+HTTP/1.1 200 OK
+
+Hello, World!
+"""
+    client_connection.sendall(http_response.encode())
+    client_connection.close()
+
+Thanks.
+
+You're welcome!
+
+write simple server http in php:
+
+<?php
+
+$host = 'localhost';
+$port = 8888;
+
+$socket = socket_create(AF_INET, SOCK_STREAM, 0);
+socket_bind($socket, $host, $port);
+socket_listen($socket);
+
+echo "Serving HTTP on port {$port} ...\n";
+
+while (true) {
+    $client = socket_accept($socket);
+
+    $request = socket_read($client, 1024);
+
+    $response = "HTTP/1.1 200 OK\r\n\r\nHello, World!";
+    socket_write($client, $response, strlen($response));
+    socket_close($client);
+}
+
+//
+ write simple server http on ruby:
+
+require 'socket'
+
+server = TCPServer.open(8080)
+
+loop do
+  Thread.start(server.accept) do |client|
+    request = client.gets
+    puts request
+
+    response = "HTTP/1.1 200 OK\r\n\r\nHello, World!"
+    client.print response
+    client.close
+  end
+end
+
+Thanks.
+Hi there! How can I help?
+python3 -m http.server 3000
+write this code in go
+
+package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
+func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Welcome to my website!")
+	})
+
+	fmt.Println("Server listening at port 3000")
+	http.ListenAndServe(":3000", nil)
+}
+
+Thanks for asking, I'm doing great! 
+
+//// in ruby
+require 'webrick'
+
+server = WEBrick::HTTPServer.new :Port => 3000
+
+server.mount_proc '/' do |req, res|
+  res.body = "Welcome to my website!"
+end
+
+trap 'INT' do server.shutdown end
+
+server.start
+
+Thanks for asking, I'm doing great!
