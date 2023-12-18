@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+source "http://rubygems.org"
+
+# gem "rails"
+gem 'ractor'
+# gem 'rubygems'
+# gem 'sound'
+# gem 'play_mp3'
+# gem 'playa'
+gem 'jimmy_jukebox', '~> 0.8.2'
+# gem 'posix'
+gem 'io-console'

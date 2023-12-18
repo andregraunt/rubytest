@@ -1,0 +1,19 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    io-console (0.6.0)
+    jimmy_jukebox (0.8.2)
+    ractor (0.2.0)
+      ractor-tvar
+    ractor-tvar (0.4.0)
+
+PLATFORMS
+  arm64-darwin-23
+
+DEPENDENCIES
+  io-console
+  jimmy_jukebox (~> 0.8.2)
+  ractor
+
+BUNDLED WITH
+   2.3.7
